@@ -31,7 +31,7 @@ print("{} abundant elements".format(len(abundant)))
 #print ( sum(range(LIMIT)) - sum(all_pairs_of_abundant) )
 
 #MUCH FASTER (is it because the set of abundant's is small?)
-#python3 p23.py  0.22s user 0.01s system 96% cpu 0.239 total
+#python3 p23.py  0.21s user 0.01s system 96% cpu 0.239 total
 def is_sum_of_two_abundant(n: int):
     for num in abundant:
         if num > n:
@@ -42,6 +42,3 @@ def is_sum_of_two_abundant(n: int):
 
 non_sum = [integer for integer in range(1, LIMIT) if not is_sum_of_two_abundant(integer)]
 print(sum(non_sum))
-
-all_pairs_of_abundant = [a for a in abundant] 
-
